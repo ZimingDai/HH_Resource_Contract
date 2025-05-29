@@ -26,3 +26,8 @@
 | `getLeasedOutExpanded` | 展开查询租借出的资源记录 | `owner: address`                                             | `tos: address[]`, `cpus: uint256[]`, `gpus: uint256[]`, `memoryResources: uint256[]`, `startTimes: uint256[]`, `durations: uint256[]` |
 | `isIssuer`             | 检查某地址是否是发行者   | `account: address`                                           | `bool` (返回 true 表示是发行者，false 表示不是发行者)        |
 
+## TODO
+
+1. 目前的问题是在 Webase 上部署无法使用 `msg.sender`，导致管理员和暂停者无法获得特权。需要修改权限控制机制。
+2. 租赁合约中，`leaseResource` 需要明确传递双方地址，需要改进为更简洁的操作。
+3. 归还合约的 `index` 参数不够人性化，需要改进为更易于使用和理解的参数结构。
